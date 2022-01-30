@@ -20,9 +20,9 @@ class OnBoarding: UIViewController, UIPageViewControllerDataSource {
         
         self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         
-        let page1 = ViewController1()
-        let page2 = ViewController2()
-        let page3 = ViewController3()
+        let page1 = OnboardingViewController(heroImageName: "house", titleText: "Bankey is faster, easier to use, and has a brand new look and feel that will make you feel like you are back in 1989.")
+        let page2 = OnboardingViewController(heroImageName: "person", titleText: "Bankey is faster, easier to use, and has a brand new look and feel that will make you feel like you are back in 1989.")
+        let page3 = OnboardingViewController(heroImageName: "mic", titleText: "Bankey is faster, easier to use, and has a brand new look and feel that will make you feel like you are back in 1989.")
         
         pages.append(page1)
         pages.append(page2)
@@ -40,7 +40,7 @@ class OnBoarding: UIViewController, UIPageViewControllerDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemGray2
+        view.backgroundColor = .purple
         // how to add child view controllers
         addChild(pageViewController)
         view.addSubview(pageViewController.view)
